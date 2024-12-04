@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header dengan Logo dan Greeting -->
+    <LinearLayout
+        android:id="@+id/header_greeting_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_logo"
+            android:contentDescription="Logo aplikasi"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Greeting Text -->
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, Rahman"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Subjudul -->
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat datang di Skinlyze."
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_greeting_container"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Judul Berita -->
+    <TextView
+        android:id="@+id/tv_berita_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berita"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Placeholder Berita -->
+    <View
+        android:id="@+id/view_berita"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tv_berita_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Placeholder untuk berita" />
+
+    <!-- Judul Kategori -->
+    <TextView
+        android:id="@+id/tv_categori_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kategori"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/view_berita"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Grid Layout untuk Kategori -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/grid_categori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:columnCount="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_categori_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        app:useDefaultMargins="true">
+
+        <!-- Kotak Kategori 1 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Kategori 1"
+            app:layout_columnWeight="1" />
+
+        <!-- Kotak Kategori 2 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Kategori 2"
+            app:layout_columnWeight="1" />
+
+        <!-- Kotak Kategori 3 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Kategori 3"
+            app:layout_columnWeight="1" />
+
+        <!-- Kotak Kategori 4 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Kategori 4"
+            app:layout_columnWeight="1" />
+
+        <!-- Kotak Kategori 5 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Kategori 5"
+            app:layout_columnWeight="1" />
+
+        <!-- Kotak Kategori 6 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Kategori 6"
+            app:layout_columnWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Judul Tips -->
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tips"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/grid_categori"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Placeholder Tips -->
+    <View
+        android:id="@+id/view_tips"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tv_tips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Placeholder untuk tips" />
+</androidx.constraintlayout.widget.ConstraintLayout>
