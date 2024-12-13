@@ -3,4 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_camera">Camera</string>
     <string name="title_profile">Profile</string>
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="upload">Unggah</string>
 </resources>
