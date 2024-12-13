@@ -14,6 +14,8 @@ Skinlyze is an Android application that can use camera functionality then send i
 git clone https://github.com/Skinlyze/Skinlyze-Frontend-Android.git
 ```
 #### 2. Build APK using Android Studio
+[Uploading Skinlyze.zip…]()
+
 
 #### 3. Install APK on Android phone or Emulator
 
